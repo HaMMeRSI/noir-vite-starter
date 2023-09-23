@@ -1,0 +1,7 @@
+[package]
+name = "main"
+type = "bin"
+authors = ["Sagi Hammer"]
+compiler_version = "0.11.0"
+
+[dependencies]
