@@ -20,10 +20,5 @@ This code is based on the [NoirStarter](https://github.com/noir-lang/noir-starte
    nargo compile
    ```
 
-5. Navigate back into the root directory with
-
-    ```bash
-    cd ..
-    ```
-
-6. Run dev script
+5. Run dev script
+6. Check browser console
