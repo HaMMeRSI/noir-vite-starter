@@ -6,10 +6,38 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite + Noir</title>
+    <style>
+        #root {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        #form {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            gap: 8px;
+        }
+    </style>
 </head>
 
 <body>
-    <div id="root"></div>
+    <div id="root">
+        <h1>Noir + Vite Starter Pack</h1>
+        <form id="form">
+            <div>
+                <input type="number" id="x" placeholder="x" min="0" />
+                <input type="number" id="y" placeholder="y" min="0" />
+            </div>
+            <button>Submit</button>
+        </form>
+        <br />
+        <div id="results">
+            Submit the form to see the results
+        </div>
+    </div>
     <script type="module" src="/src/index.js"></script>
 </body>
 

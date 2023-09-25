@@ -1,5 +1,4 @@
 import { decompressSync } from "fflate";
-import { executeCircuit, compressWitness } from "@noir-lang/acvm_js";
 import { Buffer } from "buffer";
 
 import circuit from "../circuits/target/main.json";
@@ -7,7 +6,11 @@ import acvmJsBgWasmInput from "@noir-lang/acvm_js/web/acvm_js_bg.wasm?url";
 
 export async function Noir() {
 	const { Barretenberg, RawBuffer, Crs } = await import("@aztec/bb.js");
-	const { default: initACVM } = await import("@noir-lang/acvm_js");
+	const {
+		default: initACVM,
+		executeCircuit,
+		compressWitness,
+	} = await import("@noir-lang/acvm_js");
 
 	const acirBuffer = Buffer.from(circuit.bytecode, "base64");
 	const acirBufferUncompressed = decompressSync(acirBuffer);
